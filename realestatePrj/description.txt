@@ -1,0 +1,3 @@
+__init__        показать, что мы исп. пакет
+asgi.py
+settings.py
