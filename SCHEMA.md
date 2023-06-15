@@ -1,29 +1,29 @@
 MODEL/DB FIELDS
 
 ### LISTING
-id: INT<br>
-realtor: INT (FOREIGN KEY [realtor])<br>
-title: STR<br>
-address: STR<br>
-city: STR<br>
-state: STR<br>
-zipcode: STR<br>
-description: TEXT (longer)<br>
-price: INT<br>
-bedrooms: INT<br>
-bathrooms: INT<br>
-garage: INT [0]<br>
-sqft: INT<br>
-lot_price: FLOAT<br>
-is_published: BOOL [true]<br>
-list_date: DATE<br>
-photo_main: SRT<br>
-photo_1: SRT<br>
-photo_2: SRT<br>
-photo_3: SRT<br>
-photo_4: SRT<br>
-photo_5: SRT<br>
-photo_6: SRT<br>
+* id: INT<br>
+* realtor: INT (FOREIGN KEY [realtor])<br>
+* title: STR<br>
+* address: STR<br>
+* city: STR<br>
+* state: STR<br>
+* zipcode: STR<br>
+* description: TEXT (longer)<br>
+* price: INT<br>
+* bedrooms: INT<br>
+* bathrooms: INT<br>
+* garage: INT [0]<br>
+* sqft: INT<br>
+* lot_price: FLOAT<br>
+* is_published: BOOL [true]<br>
+* list_date: DATE<br>
+* photo_main: SRT<br>
+* photo_1: SRT<br>
+* photo_2: SRT<br>
+* photo_3: SRT<br>
+* photo_4: SRT<br>
+* photo_5: SRT<br>
+* photo_6: SRT<br>
 
 
 ### REALTOR
