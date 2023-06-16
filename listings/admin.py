@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Listing, Realtor
+
+
+@admin.register(Listing)
+class AdminListing(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Realtor)
+class AdminRealtor(admin.ModelAdmin):
+    pass
