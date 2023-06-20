@@ -5,9 +5,12 @@ from .models import Listing, Realtor
 
 @admin.register(Listing)
 class AdminListing(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'title', 'is_published', 'price', 'list_date', 'realtor',)
+    list_display_links = ('id', 'title',)
+    list_filter = ('realtor',)
+    list_editable = ('is_published',)
+    search_fields = ('title', 'description', 'address', 'city', 'state', 'zipcode',)
+    list_per_page = 25
 
 
-@admin.register(Realtor)
-class AdminRealtor(admin.ModelAdmin):
-    pass
+
