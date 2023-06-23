@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'listings.apps.ListingsConfig',
-    'realtors.apps.RealtorsConfig'
+    'realtors.apps.RealtorsConfig',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [
@@ -60,6 +61,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                # 'django.template.context_processors.media',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -135,3 +137,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA = '/media/'
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 MEDIA_URL = MEDIA
+
+print('MEDIA_ROOT',MEDIA_ROOT)
