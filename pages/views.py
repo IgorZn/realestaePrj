@@ -41,9 +41,20 @@ def login(request):
 
 
 def search(request):
+    queryset_list = Listing.objects.order_by('-list_date')
+
+    # Keywords
+    if 'keywords' in request.GET:
+        keywords = request.GET['keywords']
+        if keywords:
+            queryset_list.filter(description__icontains=keywords)
+
+
     context = {
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
-        'state_choices': state_choices
+        'state_choices': state_choices,
+        'listings': queryset_list,
     }
+
     return render(request, 'listings/search.html', context)
