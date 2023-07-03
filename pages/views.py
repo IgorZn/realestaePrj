@@ -32,14 +32,6 @@ def about(request):
     return render(request, 'pages/about.html', context)
 
 
-def register(request):
-    return render(request, 'pages/index.html')
-
-
-def login(request):
-    return render(request, 'pages/index.html')
-
-
 def search(request):
     queryset_list = Listing.objects.order_by('-list_date')
 
