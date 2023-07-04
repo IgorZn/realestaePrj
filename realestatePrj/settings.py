@@ -139,4 +139,8 @@ MEDIA = '/media/'
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 MEDIA_URL = MEDIA
 
-print('MEDIA_ROOT',MEDIA_ROOT)
+# Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
