@@ -33,7 +33,9 @@
                                 <div class="col-md-4 mb-3">
                                     <label class="sr-only">State</label>
                                     <select name="state" class="form-control">
-                                        <option selected="true" disabled="disabled" value="{{ values.state }}">State (All)</option>
+                                        <option selected="true" disabled="disabled" value="{{ values.state }}">State
+                                            (All)
+                                        </option>
                                         {% for key, val in state_choices.items %}
                                             <option value="{{ key }}">{{ val }}</option>
                                         {% endfor %}
@@ -45,7 +47,9 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="sr-only">Bedrooms</label>
                                     <select name="bedrooms" class="form-control">
-                                        <option selected="true" disabled="disabled" value="{{ values.bedrooms }}">Bedrooms (All)</option>
+                                        <option selected="true" disabled="disabled" value="{{ values.bedrooms }}">
+                                            Bedrooms (All)
+                                        </option>
                                         {% for key,val in bedroom_choices.items %}
                                             <option value="{{ key }}">{{ val }}</option>
                                         {% endfor %}
@@ -67,6 +71,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Alerts -->
+    {% include 'partials/_alerts.html' %}
 
     <!-- Listings -->
     <section id="listings" class="py-5">

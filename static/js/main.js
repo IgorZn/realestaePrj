@@ -3,4 +3,4 @@ document.querySelector('.year').innerHTML = date.getFullYear()
 
 setTimeout(() => {
     $('#message').fadeOut('slow')
-}, 2000)
+}, 3000)
