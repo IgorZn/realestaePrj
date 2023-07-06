@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 
 
-# Create your views here.
+from listings.models import Listing
 
 
 def register(request):
@@ -66,8 +66,11 @@ def login(request):
 
 
 def logout(request):
-    return redirect('index')
+    if request.method == 'POST':
+        auth.logout(request), messages.add_message(request, messages.ERROR, 'You are now logged out')
+        return redirect('index')
 
 
 def dashboard(request):
+    listings = Listing.objects.filter()
     return render(request, 'accounts/dashboard.html')
