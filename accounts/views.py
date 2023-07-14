@@ -5,6 +5,7 @@ from django.contrib import auth
 
 
 from listings.models import Listing
+from contacts.models import Contact
 
 
 def register(request):
@@ -72,5 +73,8 @@ def logout(request):
 
 
 def dashboard(request):
-    listings = Listing.objects.filter()
-    return render(request, 'accounts/dashboard.html')
+    contacts = Contact.objects.order_by('-contact_date').filter(user_id=request.user.id)
+    context = {
+        'contacts': contacts
+    }
+    return render(request, 'accounts/dashboard.html', context)

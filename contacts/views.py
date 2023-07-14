@@ -20,7 +20,7 @@ def contact(request):
         # Check if user has made inquiry already
         if request.user.is_authenticated:
             user_id = request.user.id
-            has_contacted = Contact.objects.all().filter(listing_id=context['listing_id'], user_id=context[user_id])
+            has_contacted = Contact.objects.all().filter(listing_id=context['listing_id'], user_id=user_id)
             if has_contacted:
                 messages.add_message(request, messages.ERROR, f'You have already made an inquiry for this listing')
             else:
